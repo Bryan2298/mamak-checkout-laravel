@@ -67,6 +67,12 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .container-style {
+                font-weight: bold; 
+                width: 40%; 
+                margin: auto;
+            }
         </style>
     </head>
     <body>
@@ -82,10 +88,10 @@
                 </div>
             @endif
             <form method="POST" action={{route("checkout")}}>
-                @csrf {{-- avoid (CSRF) attacks--}}
+                @csrf {{-- protect from (CSRF) attacks--}}
                 <div class="row">
                     <div class="col-12">
-                    <select class="form-control" name="product_code" style="font-weight: bold; width: 40%; margin: auto;">
+                    <select class="form-control container-style" name="product_code">
                         @foreach($products as $product)
                             <option style="font-weight: bold" value={{$product->code}}>{{$product->code}}: {{$product->name}} | (RM{{number_format((float)$product->price, 2, '.', '')}})</option>
                         @endforeach
@@ -95,7 +101,7 @@
                 </div>
             </form>
 
-            <div class="container" style="font-weight: bold; width: 40%; margin: auto;">
+            <div class="container container-style">
                 List: 
                 @foreach($checkout_list as $checkout_item)
                     @if ($loop->last)
@@ -105,7 +111,7 @@
                     @endif
                 @endforeach
                 <br>
-                Total price expected: RM{{number_format((float)$total_price, 2, '.', '')}}
+                Total price: RM{{number_format((float)$total_price, 2, '.', '')}}
                 <br>
                 <a type="submit" href={{route("checkout.clear")}} class="btn btn-primary mt-4" style="width: 40%;">Clear Items</a>
             </div>

@@ -12,7 +12,10 @@ class HomeController extends Controller
     public function home() {
         $products = Product::all();
         $checkout_list = Checkout::all();
-        $total_price = $checkout_list->sum("product_price");
+
+        $checkout = new Checkout();
+        $total_price = $checkout->all()->sum("product_price"); // To get the sum of products in our checkout
+        
         return view('welcome', ["products" => $products, "checkout_list" => $checkout_list, "total_price" => $total_price]);
     }
 }
