@@ -1,6 +1,7 @@
 ## Steps to run code ##
 
-> - Create a database locally named "mamak_db" utf8_general_ci
+> - Install XAMPP (if not installed) and start Apache and MySQL.
+> - Go to localhost/phpmyadmin and create a database locally named "mamak_db" utf8_general_ci
 > - Download composer https://getcomposer.org/download/
 > - Install XAMPP.
 > - Unzip the file to htdocs folder.
@@ -13,4 +14,8 @@
 > - Run php artisan db:seed to run seeders.
 > - Run php artisan serve
 
-##### You can now access the project at localhost:8000 ####
+#### To view the UI ####
+##### In your web browser, type in localhost:8000 ####
+- The UI shows a simple dropdown where we are able to select the available food and drink.
+- After selecting the food/drink you want, you can then proceed to click on the "Scan" button.
+- Below the Scan button shows the "List" of items we have selected and also it's total price.
