@@ -1,4 +1,4 @@
-##Steps to run code##
+## Steps to run code ##
 
 > - Create a database locally named "mamak_db" utf8_general_ci
 > - Download composer https://getcomposer.org/download/
@@ -13,4 +13,4 @@
 > - Run php artisan db:seed to run seeders.
 > - Run php artisan serve
 
-#####You can now access the project at localhost:8000
+##### You can now access the project at localhost:8000 ####
