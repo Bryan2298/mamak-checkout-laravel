@@ -10,7 +10,7 @@
 > - Run composer install or php composer.phar install. If you have composer installed, ensure that it is updated.
 > - Run php artisan key:generate
 > - Run php artisan migrate
-> - Run php artisan db:seed to run seeders.
+> - Run php artisan db:seed to run seeders. (The ProductSeeder.php file is where I have added the 3 products to be added into the Products table in the mamak_db database)
 > - Run php artisan serve
 
 #### To view the UI ####
